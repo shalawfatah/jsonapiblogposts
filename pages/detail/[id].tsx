@@ -1,3 +1,5 @@
+import SingleRow from "@/components/SingleRow";
+import Table from "@/components/Table";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -35,22 +37,9 @@ export default function DetailPage() {
 
   return (
     <main className="bg-[#FEC128] text-white">
-      <table className="table-auto">
-        <thead className="bg-[#26bfa1] text-white w-auto">
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Body</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr className="">
-                <td className="border-4 border-[#FEC128] p-2 bg-white text-black">{post.id}</td>
-                <td className="border-4 border-[#FEC128] p-2 bg-white text-black">{post.title}</td>
-                <td className="border-4 border-[#FEC128] p-2 bg-white text-black">{post.body}</td>
-            </tr>
-        </tbody>
-      </table>
+      <Table>
+        <SingleRow item={post} />
+      </Table>
     </main>
   );
 }
