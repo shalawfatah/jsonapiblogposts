@@ -1,17 +1,8 @@
 import SingleRow from "@/components/SingleRow";
 import Table from "@/components/Table";
+import { Post } from "@/types/Types";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-
-interface Post {
-  id: number;
-  title: string;
-  body: string;
-}
-
-interface DetailProps {
-  post: Post;
-}
 
 export default function DetailPage() {
   const router = useRouter();

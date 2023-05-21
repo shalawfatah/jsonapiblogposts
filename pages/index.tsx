@@ -2,7 +2,6 @@ import Button from "@/components/Button";
 import SingleRow from "@/components/SingleRow";
 import Table from "@/components/Table";
 import { HomeProps, Post } from "@/types/Types";
-import Link from "next/link";
 import { useState } from "react";
 
 export default function Home({ data, totalCount }: HomeProps) {
