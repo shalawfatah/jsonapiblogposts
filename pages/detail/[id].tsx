@@ -1,6 +1,6 @@
 import SingleRow from "@/components/SingleRow";
 import Table from "@/components/Table";
-import { Post } from "@/types/Types";
+import { Post, Query } from "@/types/Types";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -35,7 +35,7 @@ export default function DetailPage() {
   );
 }
 
-export async function getServerSideProps({ query }) {
+export async function getServerSideProps({ query }: {query: Query}) {
   const { id } = query;
   const API_URL = "https://jsonplaceholder.typicode.com/posts";
   const res = await fetch(`${API_URL}/${id}`);

@@ -1,7 +1,8 @@
+import { DetailProps } from '@/types/Types'
 import Link from 'next/link'
 import React from 'react'
 
-const SingleRow = ({item}) => {
+const SingleRow = ({item}: DetailProps) => {
   return (
     <tr className="" key={item.id}>
         <td className="border-4 border-[#FEC128] bg-white">

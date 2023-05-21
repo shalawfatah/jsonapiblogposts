@@ -21,7 +21,19 @@ export interface HomeProps {
     totalCount: number;
 }
 
-  
 export interface DetailProps {
-    post: Post;
+    item: Post;
+}
+
+export interface ButtonProps {
+    isLoading: boolean
+    loadMoreData: Post[]
+}
+
+export interface TitleProps {
+    text: string;
+}
+
+export interface Query {
+    id: string;
 }
