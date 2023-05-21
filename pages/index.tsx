@@ -5,8 +5,8 @@ import { HomeProps, Post } from "@/types/Types";
 import { useState } from "react";
 
 export default function Home({ data, totalCount }: HomeProps) {
-  const [loadedData, setLoadedData] = useState(data);
-  const [isLoading, setIsLoading] = useState(false);
+  const [loadedData, setLoadedData] = useState<Post[]>(data);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [page, setPage] = useState(1); // Current page
 
   const loadMoreData = async () => {
